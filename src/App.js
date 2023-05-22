@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
+ //document.getElementsByClassName('loading').style.display = "none";
 function App() {
   return (
     <div className="App">
