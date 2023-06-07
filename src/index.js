@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
-import Slider from './slider';
-import SliderApp from './sliderApp';
- //document.getElementsByClassName('loading').style.display = "none";
+//import Slider from './slider';
+//import SliderApp from './sliderApp';
+//import SliderForm from './sliderSdgApp';
+import Sensor from './Sensor' ;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     //<App />
-    //<Slider />
-    < SliderApp/>
+   //< Slider/>
+ //<SliderForm/>
+ < Sensor />
 );
 
 // If you want to start measuring performance in your app, pass a function

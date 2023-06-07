@@ -42,4 +42,4 @@ console.log(currentpattern);
 
 };
 
-export default myMatchpattrn(); 
+//export default myMatchpattrn;

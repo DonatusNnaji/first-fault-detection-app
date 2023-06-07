@@ -1,0 +1,68 @@
+.con-box {
+  width: 70%;
+  border-radius: 10px;
+  background-color: pink;
+}
+
+h1{
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  text-align: center;
+  padding: 1px;
+}
+
+.form-wrapper{
+  flex-direction: column;
+  background-color: navy;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.progress-con {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr ;
+  background-color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 1px 3px;
+  margin-bottom: 3px;
+
+}
+
+
+.outcome {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2px;
+  padding-right: 1px;
+  justify-content: space-around;
+}
+.reading{
+  border-radius: 20px;
+  padding: 1px 3px;
+
+}
+.indicator{
+  border-radius: 50%;
+  padding: 1px 3px;
+  background-color: green;
+  width:25px;
+  height: 25px;
+}
+
+.button-con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+
+}
+.fault{
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  color: red;
+  line-height: 40px;
+  margin-bottom: 5px;
+}
