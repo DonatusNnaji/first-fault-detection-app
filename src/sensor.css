@@ -1,5 +1,5 @@
 .con-box {
-  width: 70%;
+  width: 80%;
   border-radius: 10px;
   background-color: pink;
 }
@@ -45,7 +45,7 @@ h1{
 }
 .indicator{
   border-radius: 50%;
-  padding: 1px 3px;
+  padding: 2px 3px;
   background-color: green;
   width:25px;
   height: 25px;
