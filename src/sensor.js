@@ -133,7 +133,7 @@ function Sensor () {
       </div>
 
       <div className= 'progress-con'>
-        <label className = "sliderLabe6" htmlFor="slider6"  >sliderE</label>
+        <label className = "sliderLabe6" htmlFor="slider6"  >sliderF</label>
         <input type= 'range' name= 'sensor6' id= 'slider6' mim= {0} max= {200} value= {sensorvalues.sensor6} onChange= {handleSensorChange} />
         <div className= 'outcome'>
           <span className= 'badge bg-secondary' id= 'reading6'>{sensorvalues.sensor6} </span>
