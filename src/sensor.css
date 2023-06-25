@@ -10,8 +10,9 @@
 }
 
 h1{
-  font-size: 25px;
-  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 700;
   margin-top: 3rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -28,14 +29,27 @@ h1{
 .progress-con {
   display: grid;
   grid-template-columns: 2fr 3fr 1fr ;
-  background-color: white;
+  /*background-color: gray;*/
   font-size: 20px;
   border-radius: 5px;
   padding: 1px 3px;
   margin-bottom: 5px;
 
 }
+.sliderLabel{
+  background-image: linear-gradient(oliveDrab, yellow);
+  padding: 1px 3px;
+  border-radius: 10px;
+  text-align: center;
 
+}
+.progress-con input[type="range"]{
+  border-radius: 25px;
+  color: pink;
+  background-color: gold;
+  width: auto;
+  height: min-content;
+}
 
 .outcome {
   display: flex;
@@ -47,14 +61,17 @@ h1{
 .reading{
   border-radius: 20px;
   padding: 1px 3px;
-
-}
-.indicator{
-  border-radius: 50%;
-  padding: 2px 3px;
-  background-color: green;
   width:25px;
   height: 25px;
+}
+.indicator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+width: 20px;
+height: 20px;
+border-radius: 50%;
 }
 
 .button-con{
@@ -65,11 +82,17 @@ h1{
 
 }
 .fault{
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
+  font-variant: small-caps;
   text-align: center;
   color: red;
-  /*line-height: 40px;*/
   padding-bottom: 2rem;
   margin-bottom: 5px;
+  background: linear-gradient(#262626, white, #262626);
+  border-radius: 10px;
+/*  box-shadow: inset 5px 5px 10px  rgba(0, 0, 0, 0.1), 5px 5px 10px  rgba(0, 0, 0, 0.1),
+               -5px -5px 10px rgba(225, 225, 225, 0.5), -5px 52px 10px rgba(225, 225, 225, 0.5);
+*/
+
 }

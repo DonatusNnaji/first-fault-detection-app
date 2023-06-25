@@ -83,7 +83,7 @@ function Sensor () {
      <form className= ' form-wrapper d-flex' >
 
       <div className= 'progress-con'>
-        <label className = "sliderLabel" htmlFor="slider1"  >sliderA</label>
+        <label className = "sliderLabel" htmlFor="slider1"  >Boiler Water Temp Sensor in &deg;C</label>
         <input type= 'range' name= 'sensor1' id= 'slider1' mim= {0} max= {200} value= {sensorvalues.sensor1} onChange= {handleSensorChange} />
         <div className= 'outcome'>
           <span className= 'badge bg-secondary' id= 'reading1'>{sensorvalues.sensor1} </span>
@@ -93,7 +93,7 @@ function Sensor () {
       </div>
 
       <div className= 'progress-con'>
-        <label className = "sliderLabe2" htmlFor="slider2"  > sliderB</label>
+        <label className = "sliderLabel" htmlFor="slider2"  >Boiler Drum pressure Sensor in bar</label>
         <input type= 'range' name= 'sensor2' id= 'slider2' min= {0} max= {200} value= {sensorvalues.sensor2} onChange= {handleSensorChange} />
         <div className= 'outcome'>
           <span className= 'badge bg-secondary' id= 'reading2'>{sensorvalues.sensor2} </span>
@@ -103,7 +103,7 @@ function Sensor () {
       </div>
 
       <div className= 'progress-con'>
-        <label className = "sliderLabe3" htmlFor="slider3"  >sliderC</label>
+        <label className = "sliderLabel" htmlFor="slider3"  >Feed Water flowrate in m<sup>3</sup>/h</label>
         <input type= 'range' name= 'sensor3' id= 'slider3' mim= {0} max= {200} value= {sensorvalues.sensor3} onChange= {handleSensorChange} />
         <div className= 'outcome'>
           <span className= 'badge bg-secondary' id= 'reading3'>{sensorvalues.sensor3} </span>
@@ -113,7 +113,7 @@ function Sensor () {
       </div>
 
       <div className= 'progress-con'>
-        <label className = "sliderLabe4" htmlFor="slider4"  >sliderD</label>
+        <label className = "sliderLabel" htmlFor="slider4"  >Boiler water PH indicator Sensor</label>
         <input type= 'range' name= 'sensor4' id= 'slider4' mim= {0} max= {200} value= {sensorvalues.sensor4} onChange= {handleSensorChange} />
         <div className= 'outcome'>
           <span className= 'badge bg-secondary' id= 'reading4'>{sensorvalues.sensor4} </span>
@@ -123,7 +123,7 @@ function Sensor () {
       </div>
 
       <div className= 'progress-con'>
-        <label className = "sliderLabe5" htmlFor="slider5"  >sliderE</label>
+        <label className = "sliderLabel" htmlFor="slider5"  > Drum water Level Sensor in meters</label>
         <input type= 'range' name= 'sensor5' id= 'slider5' mim= {0} max= {200} value= {sensorvalues.sensor5} onChange= {handleSensorChange} />
         <div className= 'outcome'>
           <span className= 'badge bg-secondary' id= 'reading5'>{sensorvalues.sensor5} </span>
@@ -133,7 +133,7 @@ function Sensor () {
       </div>
 
       <div className= 'progress-con'>
-        <label className = "sliderLabe6" htmlFor="slider6"  >sliderF</label>
+        <label className = "sliderLabel" htmlFor="slider6"  >Flue Gas Oxygen Sensor O<sub>2</sub> in ppm</label>
         <input type= 'range' name= 'sensor6' id= 'slider6' mim= {0} max= {200} value= {sensorvalues.sensor6} onChange= {handleSensorChange} />
         <div className= 'outcome'>
           <span className= 'badge bg-secondary' id= 'reading6'>{sensorvalues.sensor6} </span>
