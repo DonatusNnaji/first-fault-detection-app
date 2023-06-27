@@ -38,12 +38,17 @@ h1{
 }
 .sliderLabel{
   background-image: linear-gradient(oliveDrab, yellow);
-  padding: 1px 3px;
+  padding: 1px 14px;
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
+  font-size: 15px;
+  font-variant: small-caps;
+  font-stretch: semi-condensed;
+
+
 
 }
-.progress-con input[type="range"]{
+ input[type= "range"] {
   border-radius: 25px;
   color: pink;
   background-color: gold;
