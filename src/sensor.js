@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './sensor.css';
 
@@ -6,6 +6,7 @@ function Sensor () {
   const [sensorvalues, setSensorValues] = useState({
     sensor1: 100, sensor2: 100, sensor3: 100, sensor4: 100, sensor5: 100, sensor6: 100
   });
+  const displayFaultMessage = useRef(" fault messages");
   const handleSensorChange = (event) => {
     const {name, value} = event.target;
     const upDatesensor = (prevValue) => ({ ...prevValue, [name]: value }) ;
@@ -24,37 +25,53 @@ function Sensor () {
   const handleSumit = (event) => {
     event.preventDefault();
 
-    const sensorArray = [];
     const s1 = sdgSign(50, sensorvalues.sensor1, 150);
-    sensorArray.push(s1);
+    //sensorArray.push(s1);
     const s2 = sdgSign(50, sensorvalues.sensor2, 150);
-    sensorArray.push(s2);
+    //sensorArray.push(s2);
     const s3 = sdgSign(50, sensorvalues.sensor3, 150);
-    sensorArray.push(s3);
+    //sensorArray.push(s3);
     const s4 = sdgSign(50, sensorvalues.sensor4, 150);
-    sensorArray.push(s4);
+  //  sensorArray.push(s4);
     const s5 = sdgSign(50, sensorvalues.sensor5, 150);
-    sensorArray.push(s5);
+    //sensorArray.push(s5);
     const s6 = sdgSign(50, sensorvalues.sensor6, 150);
-    sensorArray.push(s6);
+    //sensorArray.push(s6);
 
-    const currentPattern = sensorArray.join("");
+    //const currentPattern = sensorArray.join("");
+
+    const finalSensorArray = [s1, s2, s3, s4, s5, s6];
+    const currentPattern = finalSensorArray.join('');
 
     var faultPattern = [ "010001", "100100", "000100", "011111"];
     var faultMessage = [ "low flowrate", "low temperature", "low pressure", "low volume"];
 
-  var ok = false;
-   for( var i = 0; i< faultPattern.length; i++){
-     if( !ok) {
-       if(currentPattern === faultPattern[i]){  document.getElementById('faultMessages').innerHTML = faultMessage[i];
+//  var ok = false;
+  // for( var i = 0; i< faultPattern.length; i++){
+    // if( !ok) {
+    //   if( faultPattern[i] === currentPattern   ){ displayFaultMessage.current  = faultMessage[i];
 
-        ok = true;
-         }
-      }
-   }
-   if (!ok){document.getElementById('faultMessages').innerHTML = " No fault detected!" ;}
+    //    ok = true;
+    //     }
+    //  }
+  // }
+  // if (!ok){displayFaultMessage.current  = " No fault detected!" ;}
+  let found = false;
+//for (const [index, str] of faultPattern.entries()) {
+faultPattern.forEach((item, i) => {
 
+});
 
+  if(str ===currentPattern){
+    displayFaultMessage.current = faultMessage[index];
+    found = true;
+    break;
+  }
+
+//}
+if (!found) {
+  displayFaultMessage.current  = " No fault detected!" ;
+}
 
 };
 //function indicatorChange(sliderId) {
@@ -65,7 +82,7 @@ function Sensor () {
 //}
 
 //function indicatorChange(sliderId) {
-  //const indicatorId = `indicator${sliderId.slice(-1)}` ;
+  //const indicatorId = `indicator${sliderId.slicere(-1)}` ;
   //const indicator = document.getElementById(indicatorId);
   //const colorValue = `sensorvalues.sensor${sliderId.slice(-1)}`;
 //  indicator.style.backgroudColor = (colorValue < 50)? 'yellow'
@@ -74,7 +91,7 @@ function Sensor () {
 
   const handleReset = (event) => {
      setSensorValues({ sensor1: 100, sensor2: 100, sensor3: 100, sensor4: 100, sensor5: 100, sensor6: 100});
-    document.getElementById('faultMessages').innerHTML ='fault message';
+    displayFaultMessage.current= null;
   }
   return (
     <div  className= 'container con-box card'>
@@ -148,8 +165,8 @@ function Sensor () {
 
     </form>
 
-    <div className = 'fault' id= 'faultMessages'>
-          fault Message
+    <div className = 'fault' id= 'faultMessages' ref = {displayFaultMessage}>
+          {displayFaultMessage.current}
     </div>
     </div>
 
