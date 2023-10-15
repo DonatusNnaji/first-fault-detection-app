@@ -5,7 +5,7 @@ import './index.css';
 //import Slider from './slider';
 //import SliderApp from './sliderApp';
 //import SliderForm from './sliderSdgApp';
-import Sensor from './Sensor' ;
+import Sensor from './sensor' ;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     //<App />
