@@ -23,35 +23,28 @@ function Sensor () {
 
   const handleSumit = (event) => {
     event.preventDefault();
-    const sensorArray = [];
-    const s1 = sdgSign(50, sensorvalues.sensor1, 150);
-    sensorArray.push(s1);
-    const s2 = sdgSign(50, sensorvalues.sensor2, 150);
-    sensorArray.push(s2);
-    const s3 = sdgSign(50, sensorvalues.sensor3, 150);
-    sensorArray.push(s3);
-    const s4 = sdgSign(50, sensorvalues.sensor4, 150);
-    sensorArray.push(s4);
-    const s5 = sdgSign(50, sensorvalues.sensor5, 150);
-    sensorArray.push(s5);
-    const s6 = sdgSign(50, sensorvalues.sensor6, 150);
-    sensorArray.push(s6);
 
+    const s1 = sdgSign(50, sensorvalues.sensor1, 150);
+    const s2 = sdgSign(50, sensorvalues.sensor2, 150);
+    const s3 = sdgSign(50, sensorvalues.sensor3, 150);
+    const s4 = sdgSign(50, sensorvalues.sensor4, 150);
+    const s5 = sdgSign(50, sensorvalues.sensor5, 150);
+    const s6 = sdgSign(50, sensorvalues.sensor6, 150);
+    const sensorArray = [s1, s2, s3, s4, s5, s6];
     const currentPattern = sensorArray.join("");
+
     var faultPattern = [ "010001", "100100", "000100", "011111"];
     var faultMessage = [ "low flowrate", "low temperature", "low pressure", "low volume"];
 
-  var ok = false;
-   for( var i = 0; i< faultPattern.length; i++){
-     if( !ok) {
+  var ok /*found*/ = false;
+   for( let i = 0; i< faultPattern.length; i++){
+     if( !ok /*not found*/) {
        if( faultPattern[i] === currentPattern   ){ displayFaultMessage.current.innerHTML  = faultMessage[i];
-
-        ok = true;
+        ok /*found*/= true;
          }
       }
    }
    if (!ok){displayFaultMessage.current.innerHTML  = " No fault detected!" ;}
-//  }
 };
 
   const handleReset = (event) => {
