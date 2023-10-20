@@ -120,8 +120,6 @@ border-radius: 50%;
     background-color: oliveDrab;
   }
   h1{
-
-    font-size: 1.9rem;
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
@@ -136,6 +134,9 @@ border-radius: 50%;
 
  input[type= "range"] {
 
+ }
+ .sliderLabel{
+   text-align: center;
  }
    .outcome {
     justify-content: space-between;
