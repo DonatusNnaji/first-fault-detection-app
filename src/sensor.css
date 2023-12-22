@@ -51,7 +51,7 @@ h1{
   border-radius: 0.6rem;
   text-align: left;
   font-size: 0.9rem;
-  font-variant: small-caps;
+  /*font-variant: small-caps;*/
   font-stretch: semi-condensed;
 
 }

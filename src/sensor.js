@@ -4,12 +4,12 @@ import './sensor.css';
 import RangeSlider from './componets/slidercomponents.js';
 
 const sliderDatas = [
-{postfixId: 1, slidertitle: "Boiler Water Temp Sensor in &deg;C"},
+{postfixId: 1, slidertitle: "Boiler Water Temp Sensor in \u00B0C"},
 {postfixId: 2, slidertitle: "Boiler Drum pressure Sensor in bar"},
-{postfixId: 3, slidertitle: "Feed Water flowrate in m"},
+{postfixId: 3, slidertitle: "Feed Water flowrate in Liters/seconds"},
 {postfixId: 4, slidertitle: "Boiler water PH indicator Sensor"},
 {postfixId: 5, slidertitle: "Drum water Level Sensor in meters"},
-{postfixId: 6, slidertitle: "Flue Gas Oxygen Sensor O<sub>2</sub> in ppm"}]
+{postfixId: 6, slidertitle: "Flue Gas Oxygen Sensor oxygen in ppm"}]
 
 
 function Sensor () {
@@ -63,7 +63,9 @@ function Sensor () {
     displayFaultMessage.current.innerHTML = null;
   }
   const sliderlist = sliderDatas.map( (sliderdata) =>
-    (< RangeSlider postfixId= {sliderdata.postfixId} slidertitle= {sliderdata.slidertitle} handleSensorChange= {handleSensorChange} sensorvalues= {sensorvalues}/>)
+    ( < RangeSlider key = {sliderdata.postfixId} postfixId= {sliderdata.postfixId} slidertitle= {sliderdata.slidertitle}
+       handleSensorChange= {handleSensorChange} sensorvalues= {sensorvalues}/>  )
+
 
 );
   return (
